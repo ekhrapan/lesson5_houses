@@ -53,7 +53,7 @@ public class Main {
     }
 
     public static void outputActionOptions() {
-        System.out.println("");
+        System.out.println();
         System.out.println("1. Вывести список домов");
         System.out.println("2. Редактировать существующий дом");
         System.out.println("3. Добавить новый дом");
@@ -61,7 +61,7 @@ public class Main {
     }
 
     public static void outputHousesList() {
-        System.out.println("");
+        System.out.println();
         for (int i = 0; i < houses.length; i++) {
             if (houses[i] != null) {
                 System.out.println((i + 1) + ". " + houses[i].getAllHouseInfo());
