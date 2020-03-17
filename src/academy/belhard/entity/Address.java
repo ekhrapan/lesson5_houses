@@ -3,17 +3,17 @@ package academy.belhard.entity;
 public class Address {
     private String street;
     private int houseNumber;
-    private Integer houseBuildingNumber; // корпус дома, если есть
+    private String houseBuildingNumber; // корпус дома, если есть
 
     public Address(String street, int houseNumber) {
         this.street = street;
         this.houseNumber = houseNumber;
     }
 
-    public Address(String street, int houseNumber, Integer houseBuildingNumber) {
+    public Address(String street, int houseNumber, String houseBuildingNumber) {
         this.street = street;
         this.houseNumber = houseNumber;
-        this.houseBuildingNumber = houseBuildingNumber;
+        setHouseBuildingNumber(houseBuildingNumber);
     }
 
     public String getStreet() {
@@ -36,12 +36,16 @@ public class Address {
         }
     }
 
-    public Integer getHouseBuildingNumber() {
+    public String getHouseBuildingNumber() {
         return houseBuildingNumber;
     }
 
-    public void setHouseBuildingNumber(Integer houseBuildingNumber) {
-        this.houseBuildingNumber = houseBuildingNumber;
+    public void setHouseBuildingNumber(String houseBuildingNumber) {
+        if (houseBuildingNumber == null || houseBuildingNumber.isEmpty()) {
+            this.houseBuildingNumber = null;
+        } else {
+            this.houseBuildingNumber = houseBuildingNumber;
+        }
     }
 
     public String getFullAddress() {

@@ -36,10 +36,8 @@ public class House {
     }
 
     public String getAllHouseInfo() {
-        String allHouseInfo = "Год постройки: " + yearConstruction + "\n" +
+        return  "Год постройки: " + yearConstruction + "\n" +
                 "Этажность: " + levels + "\n" +
                 "Адрес: " + address.getFullAddress();
-
-        return allHouseInfo;
     }
 }
